@@ -95,7 +95,7 @@ Prédiction pour la nouvelle commande : Oui
 
 ## Explication du code
 
-Voici une explication détaillée du code Python fourni, qui utilise un arbre de décision pour prédire si une livraison sera à temps, formatée en Markdown.
+Voici une explication détaillée du code Python fourni, qui utilise un arbre de décision pour prédire si une livraison sera à temps.
 
 ### 1. Importation des bibliothèques
 ```python
