@@ -1,10 +1,10 @@
 # Exemple d'arbre de décision en Python
 
-Ce projet propose un pipeline ETL (Extraction, Transformation, Chargement) simple en Python. Il utilise un arbre de décision pour prédire si une livraison sera effectuée à temps, à partir de caractéristiques de commandes (type de produit, distance, saison). Les données sont simulées dans le script.
+Ce projet propose un exemple simple d'arbre de décision en Python. Il utilise un arbre de décision pour prédire si une livraison sera effectuée à temps, à partir de caractéristiques de commandes (type de produit, distance, saison). Les données sont simulées dans le script.
 
 ## Prérequis
 
-Avant de procéder, assurez-vous d'installer Python 3.7 ou une version ultérieure sur votre machine.
+Avant de procéder, assurez-vous d'installer Python 3.10 ou une version ultérieure sur votre machine.
 
 - **Pour Windows** :
   1. Téléchargez l'installateur depuis https://www.python.org/downloads/windows/
@@ -134,17 +134,7 @@ y = df['Livraison_A_Temps']
 - `X` contient les variables d'entrée : `Type_Produit_Non_Fragile`, `Distance_Proche`, `Saison_Haute`.
 - `y` contient la variable cible : `Livraison_A_Temps` ("Oui" ou "Non").
 
-### 5. Affichage des données
-```python
-print("Données initiales :")
-print(data)
-print("Données d'entraînement :")
-print(X)
-print(y)
-```
-- Affiche les données brutes et transformées pour vérification.
-
-### 6. Entraînement du modèle
+### 5. Entraînement du modèle
 ```python
 clf = DecisionTreeClassifier(max_depth=3, random_state=42)
 clf.fit(X, y)
@@ -153,7 +143,7 @@ clf.fit(X, y)
 - `random_state=42` garantit la reproductibilité des résultats.
 - `fit(X, y)` entraîne le modèle sur les caractéristiques (`X`) et la cible (`y`).
 
-### 7. Prédiction pour une nouvelle commande
+### 6. Prédiction pour une nouvelle commande
 ```python
 nouvelle_commande = pd.DataFrame({
     'Type_Produit_Non_Fragile': [1],  # Non_Fragile
